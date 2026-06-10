@@ -64,7 +64,7 @@ class MainActivity : ComponentActivity() {
                             label = { Text("Comments") },
                             placeholder = { Text("Comments") }
                         )
-                        val feedback = arrayOf("6-person waterproof","Should last for 4 days","Use for emergencies ONLY!!","Must always have")
+                        val feedback = arrayOf("3-person each waterproof","Last for 4 days","Emergencies ONLY!!","Long strand")
                         Button(//Takes you to the next screen which is the Detailed View screen.
                             onClick = {
                                 val intent = Intent(this@MainActivity, DetailedView::class.java)

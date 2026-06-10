@@ -15,6 +15,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.core.os.postDelayed
 import com.example.campsitecommander.ui.theme.CampsiteCommanderTheme
 
 class WelcomeScreen : ComponentActivity() {
@@ -23,19 +24,23 @@ class WelcomeScreen : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             CampsiteCommanderTheme {
-                Text("Welcome to the app which helps you store the camping gear and food supplies you will need for the camp")
+                Text("Welcome to the app which helps you store the camping gear and food supplies you will need for the camp.")
 
-                Button(//Takes you to the next screen which is the Main screen.
-                    onClick = {
-                        val intent = Intent(this@WelcomeScreen, MainActivity::class.java)
-                        startActivity(intent)
-                    }
-                ) {
-                    Text("Start")
-                }
+                Handler(Looper.getMainLooper()).postDelayed({
+                    //starts the next screen.
+                    val intent = Intent(this@WelcomeScreen, MainActivity::class.java)
+                    startActivity(intent)
+                    overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out)
+                    finish()
+                } , 3000) // changes to main screen after 3000 milliseconds(3 seconds).
+
 
             }
         }
     }
+
+
 }
+
+
 
