@@ -13,13 +13,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.campsitecommander.ui.theme.CampsiteCommanderTheme
 
-class WelcomeScreen : ComponentActivity() {
+class DetailedView : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
             CampsiteCommanderTheme {
-
+                
             }
         }
     }

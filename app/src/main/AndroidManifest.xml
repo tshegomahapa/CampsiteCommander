@@ -12,6 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CampsiteCommander">
         <activity
+            android:name=".DetailedView"
+            android:exported="false"
+            android:label="@string/title_activity_detailed_view"
+            android:theme="@style/Theme.CampsiteCommander" />
+        <activity
             android:name=".WelcomeScreen"
             android:exported="true"
             android:label="@string/title_activity_welcome_screen"
