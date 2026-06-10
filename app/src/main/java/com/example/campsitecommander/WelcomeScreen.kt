@@ -21,7 +21,8 @@ class WelcomeScreen : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             CampsiteCommanderTheme {
-                Button(
+                Text("Welcome to the app which helps you store the camping gear and food supplies you will need for the camp")
+                Button(//Takes you to the next screen which is the Main screen.
                     onClick = {
                         val intent = Intent(this@WelcomeScreen, MainActivity::class.java)
                         startActivity(intent)
