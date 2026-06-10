@@ -19,7 +19,7 @@ class DetailedView : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             CampsiteCommanderTheme {
-                
+
             }
         }
     }
