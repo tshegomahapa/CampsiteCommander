@@ -30,7 +30,14 @@ class MainActivity : ComponentActivity() {
         setContent {
             CampsiteCommanderTheme {
                 // ST10530609 Tshegofatso Natasha Mahapa
-                    Column() { //Adds Anything necessary for the camp.
+                Column(
+                    modifier =
+                        Modifier.fillMaxSize(),
+                    verticalArrangement =
+                        Arrangement.Center,
+                    horizontalAlignment =
+                        Alignment.CenterHorizontally
+                ) { //Adds Anything necessary for the camp.
                         Text("Add Gears")
                         var itemName by remember { mutableStateOf("") }//Enter the item name.
                         OutlinedTextField(
