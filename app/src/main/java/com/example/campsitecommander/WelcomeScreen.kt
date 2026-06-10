@@ -2,6 +2,8 @@ package com.example.campsitecommander
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -22,6 +24,7 @@ class WelcomeScreen : ComponentActivity() {
         setContent {
             CampsiteCommanderTheme {
                 Text("Welcome to the app which helps you store the camping gear and food supplies you will need for the camp")
+
                 Button(//Takes you to the next screen which is the Main screen.
                     onClick = {
                         val intent = Intent(this@WelcomeScreen, MainActivity::class.java)
@@ -30,6 +33,7 @@ class WelcomeScreen : ComponentActivity() {
                 ) {
                     Text("Start")
                 }
+
             }
         }
     }

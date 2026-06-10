@@ -30,14 +30,9 @@ class MainActivity : ComponentActivity() {
         setContent {
             CampsiteCommanderTheme {
                 // ST10530609 Tshegofatso Natasha Mahapa
-                    Column(modifier = Modifier.fillMaxSize(),
-                        verticalArrangement = Arrangement.Center
-
-
-
-                    ) { //Adds Anything necessary for the camp
+                    Column() { //Adds Anything necessary for the camp.
                         Text("Add Gears")
-                        var itemName by remember { mutableStateOf("") }//Enter the item.
+                        var itemName by remember { mutableStateOf("") }//Enter the item name.
                         OutlinedTextField(
                             value = itemName,
                             onValueChange = { itemName = it },
@@ -45,6 +40,7 @@ class MainActivity : ComponentActivity() {
                             placeholder = { Text("Item Name") }
 
                         )
+                        val nameOfItem = arrayOf("Tent","Bread","pocket knife","Bandage")
                         var category by remember { mutableStateOf("") }//Specify which category it falls under.
                         OutlinedTextField(
                             value = category,
@@ -52,6 +48,7 @@ class MainActivity : ComponentActivity() {
                             label = { Text("Category") },
                             placeholder = { Text("Category") }
                         )
+                        val categoryOfItem = arrayOf("Shelter","Food","Safety","First Aid")
                         var quantity by remember { mutableStateOf("") }//Indicate how many items you have per category.
                         OutlinedTextField(
                             value = quantity,
@@ -59,14 +56,7 @@ class MainActivity : ComponentActivity() {
                             label = { Text("Quantity") },
                             placeholder = { Text("Quantity") }
                         )
-                        var firstAid by remember { mutableStateOf("") }//Indicate how many items you have per category.
-                        OutlinedTextField(
-                            value = firstAid,
-                            onValueChange = { firstAid = it },
-                            label = { Text("First Aid") },
-                            placeholder = { Text("First Aid") }
-                        )
-
+                        val noOfItems = arrayOf(2,8,3,10)
                         var comments by remember { mutableStateOf("") }//add anything you think could be important.
                         OutlinedTextField(
                             value = comments,
@@ -74,7 +64,8 @@ class MainActivity : ComponentActivity() {
                             label = { Text("Comments") },
                             placeholder = { Text("Comments") }
                         )
-                        Button(//Takes you to the next screen which is the Detailed view screen.
+                        val feedback = arrayOf("6-person waterproof","Should last for 4 days","Use for emergencies ONLY!!","Must always have")
+                        Button(//Takes you to the next screen which is the Detailed View screen.
                             onClick = {
                                 val intent = Intent(this@MainActivity, DetailedView::class.java)
                                 startActivity(intent)
