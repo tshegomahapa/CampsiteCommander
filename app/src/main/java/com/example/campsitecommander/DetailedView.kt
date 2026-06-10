@@ -32,7 +32,12 @@ class DetailedView : ComponentActivity() {
                     horizontalAlignment =
                         Alignment.CenterHorizontally
                 ){
-
+                    data class GearItem(
+                        val itemName: String,
+                        val category: String ,
+                        val quantity : Int ,
+                        val comments : String
+                    )
 
                     Button(
                         onClick = {
