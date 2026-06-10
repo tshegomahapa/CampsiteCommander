@@ -1,7 +1,12 @@
 package com.example.campsitecommander
 
+import android.R.attr.text
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import android.view.ViewGroup
+import android.widget.Button
+import android.widget.FrameLayout
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -15,6 +20,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.campsitecommander.ui.theme.CampsiteCommanderTheme
 
@@ -31,13 +37,17 @@ class DetailedView : ComponentActivity() {
                         Arrangement.Center,
                     horizontalAlignment =
                         Alignment.CenterHorizontally
-                ){
+                ) {
+
+
                     data class GearItem(
                         val itemName: String,
-                        val category: String ,
-                        val quantity : Int ,
-                        val comments : String
+                        val category: String,
+                        val quantity: Int,
+                        val comments: String
                     )
+
+
 
                     Button(
                         onClick = {
@@ -53,4 +63,6 @@ class DetailedView : ComponentActivity() {
         }
     }
 }
+
+
 

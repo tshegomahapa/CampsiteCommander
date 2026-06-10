@@ -36,13 +36,7 @@ class WelcomeScreen : ComponentActivity() {
         setContent {
 
             CampsiteCommanderTheme {
-                val  DarkColorScheme = darkColorScheme(
-                    primary = Purple80 ,
-                    background = Color(0xFF12112),
-                    surface = Color(0xFF1E1E1E),
-                    onPrimary = Color.Black,
-                    onBackground = Color.White
-                )
+
                 val rootLayout = LinearLayout(this).apply{
                     orientation = LinearLayout.VERTICAL
                     layoutParams= LinearLayout.LayoutParams(
