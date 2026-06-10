@@ -19,7 +19,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             CampsiteCommanderTheme {
-
+                // ST10530609 Tshegofatso Natasha Mahapa
             }
         }
     }
