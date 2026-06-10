@@ -81,6 +81,24 @@ class MainActivity : ComponentActivity() {
                         ) {
                             Text("Detailed View")
                         }
+                    data class PackedItem (val itemName: String , val quantity: Int)
+                    val itemList = listOf(
+                        PackedItem("Tent",2),
+                        PackedItem("Bread",8),
+                        PackedItem("pocket knife",3),
+                        PackedItem("Bandage",10)
+                    )
+                    var totalPacked = 0
+
+                    //Loop through each item in the list
+
+                    for (item in itemList) {
+                        totalPacked +=item.quantity //adds individual quantity to the total
+                    }
+                    Text("Total Items Packed:$totalPacked")
+
+
+
                 }
             }
         }
