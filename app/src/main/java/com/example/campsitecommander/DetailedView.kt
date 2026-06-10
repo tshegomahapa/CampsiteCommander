@@ -32,9 +32,11 @@ class DetailedView : ComponentActivity() {
                     horizontalAlignment =
                         Alignment.CenterHorizontally
                 ){
+
+
                     Button(
                         onClick = {
-                            //Goes back to Main Screen.
+                            //Returns to Main Screen.
                             val intent = Intent(this@DetailedView, MainActivity::class.java)
                             startActivity(intent)
                         }

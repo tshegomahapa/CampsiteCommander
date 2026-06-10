@@ -1,5 +1,6 @@
 package com.example.campsitecommander
 
+import android.R
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -30,6 +31,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             CampsiteCommanderTheme {
                 // ST10530609 Tshegofatso Natasha Mahapa
+
                 Column(
                     modifier =
                         Modifier.fillMaxSize(),
@@ -45,9 +47,8 @@ class MainActivity : ComponentActivity() {
                             onValueChange = { itemName = it },
                             label = { Text("Item Name") },
                             placeholder = { Text("Item Name") }
-
                         )
-                        val nameOfItem = arrayOf("Tent","Bread","pocket knife","Bandage")
+                        val nameOfItem = arrayOf("Tent","Bread","pocket knife","Bandage")//stores each item
                         var category by remember { mutableStateOf("") }//Specify which category it falls under.
                         OutlinedTextField(
                             value = category,
@@ -55,7 +56,7 @@ class MainActivity : ComponentActivity() {
                             label = { Text("Category") },
                             placeholder = { Text("Category") }
                         )
-                        val categoryOfItem = arrayOf("Shelter","Food","Safety","First Aid")
+                        val categoryOfItem = arrayOf("Shelter","Food","Safety","First Aid")//stores each item in its category.
                         var quantity by remember { mutableStateOf("") }//Indicate how many items you have per category.
                         OutlinedTextField(
                             value = quantity,
@@ -63,7 +64,7 @@ class MainActivity : ComponentActivity() {
                             label = { Text("Quantity") },
                             placeholder = { Text("Quantity") }
                         )
-                        val noOfItems = arrayOf(2,8,3,10)
+                        val numberOfItems = arrayOf(2,8,3,10)//Specifies the number of items per category.
                         var comments by remember { mutableStateOf("") }//add anything you think could be important.
                         OutlinedTextField(
                             value = comments,
@@ -71,16 +72,16 @@ class MainActivity : ComponentActivity() {
                             label = { Text("Comments") },
                             placeholder = { Text("Comments") }
                         )
-                        val feedback = arrayOf("3-person each waterproof","Last for 4 days","Emergencies ONLY!!","Long strand")
+                        val feedback = arrayOf("3-person each waterproof","Should last for 4 days","Emergencies ONLY!!","Long strand")//Gives instructions for each item.
                         Button(//Takes you to the next screen which is the Detailed View screen.
                             onClick = {
                                 val intent = Intent(this@MainActivity, DetailedView::class.java)
                                 startActivity(intent)
                             }
                         ) {
-                            Text("Go to detailed view")
+                            Text("Detailed View")
                         }
-                    }
+                }
             }
         }
     }
